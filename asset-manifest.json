@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/senor-123/static/css/main.2c041431.chunk.css",
+    "main.js": "/senor-123/static/js/main.8ddfdca9.chunk.js",
+    "main.js.map": "/senor-123/static/js/main.8ddfdca9.chunk.js.map",
+    "runtime-main.js": "/senor-123/static/js/runtime-main.72d9bfdb.js",
+    "runtime-main.js.map": "/senor-123/static/js/runtime-main.72d9bfdb.js.map",
+    "static/js/2.780a8cac.chunk.js": "/senor-123/static/js/2.780a8cac.chunk.js",
+    "static/js/2.780a8cac.chunk.js.map": "/senor-123/static/js/2.780a8cac.chunk.js.map",
+    "index.html": "/senor-123/index.html",
+    "precache-manifest.819888324f0c7b39b90cdbd74e339fef.js": "/senor-123/precache-manifest.819888324f0c7b39b90cdbd74e339fef.js",
+    "service-worker.js": "/senor-123/service-worker.js",
+    "static/css/main.2c041431.chunk.css.map": "/senor-123/static/css/main.2c041431.chunk.css.map",
+    "static/js/2.780a8cac.chunk.js.LICENSE.txt": "/senor-123/static/js/2.780a8cac.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72d9bfdb.js",
+    "static/js/2.780a8cac.chunk.js",
+    "static/css/main.2c041431.chunk.css",
+    "static/js/main.8ddfdca9.chunk.js"
+  ]
+}
