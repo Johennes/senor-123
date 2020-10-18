@@ -1,0 +1,35 @@
+.Display {
+  box-sizing: border-box;
+  width: calc(5 * 1.6em + 4 * 0.1em);
+  padding: 0.2em 0.8em 0.2em 1.6em;
+  border: 1px solid #555;
+  border-radius: 0.2em;
+  box-shadow: inset 1px 1px 2px #555;
+}
+
+.Display-lcd {
+  background-color: #617870;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 0.1em;
+  box-shadow: inset 1px 1px 2px #000000;
+  padding: 0.2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Display-line1 {
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+.Display-line2 {
+  font-size: 0.4em;
+}
+
+.Display-icon {
+  font-size: 1em;
+}

@@ -1,0 +1,69 @@
+.Button {
+  position: relative;
+  border: none;
+  width: 100%;
+  background: none;
+  font-weight: bold;
+}
+
+.Button-background {
+  width: 100%;
+  height: 100%
+}
+
+.Button-icon {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70%;
+  height: 50%;
+}
+
+.Button-title {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.Button-circle .Button-title, .Button-ellipse .Button-title, .Button-rect .Button-title {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Button-triangle-up .Button-title {
+  bottom: 0.2em;
+}
+
+.Button-triangle-down .Button-title {
+  top: 0.2em;
+}
+
+.Button-circle {
+  height: 100%;
+  border-radius: 0.8em;
+  font-size: 1em;
+}
+
+.Button-ellipse {
+  height: 100%;
+  border-radius: 0.8em;
+  font-size: 1em;
+}
+
+.Button-rect {
+  height: 80%;
+  border-radius: 0.3em;
+  font-size: 0.5em;
+}
+
+.Button-triangle-up {
+  height: 100%;
+  font-size: 0.5em;
+}
+
+.Button-triangle-down {
+  height: 100%;
+  font-size: 0.5em;
+}

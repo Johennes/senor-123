@@ -1,0 +1,100 @@
+.Calculator-manufacturer {
+  color: #3f58bf;
+  font-size: 0.5em;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.Calculator-name {
+  color: #f1d013;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.Calculator-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Calculator-table td {
+  width: 1.6em;
+  height: 1.6em;
+  padding: 0.1em;
+  border: none;
+}
+
+.theme-button-text {
+  color: #ffffff;
+}
+
+svg .theme-button-background-main, .Button:active svg .theme-button-background-blur {
+  fill: #05438a;
+}
+
+svg .theme-button-background-blur {
+  fill: #357dcf;
+}
+
+svg .theme-button-icon-main {
+  fill: #ffffff;
+}
+
+svg .theme-button-icon-theme-1 {
+  fill: #01b4bb;
+}
+
+svg .theme-button-icon-theme-2 {
+  fill: #ce70c6;
+}
+
+svg .theme-button-icon-theme-3 {
+  fill: #f1d013;
+}
+
+svg .theme-button-icon-theme-border {
+  stroke: #ffffff;
+}
+
+.theme-unicorn svg .theme-button-background-main, .theme-unicorn .Button:active svg .theme-button-background-blur {
+  fill: #ac1ca0;
+}
+
+.theme-unicorn svg .theme-button-background-blur {
+  fill: #ce70c6;
+}
+
+.theme-forest svg .theme-button-background-main, .theme-forest .Button:active svg .theme-button-background-blur {
+  fill: #138334;
+}
+
+.theme-forest svg .theme-button-background-blur {
+  fill: #47df47;
+}
+
+.theme-haze svg .theme-button-background-main, .theme-haze .Button:active svg .theme-button-background-blur {
+  fill: #3b0581;
+}
+
+.theme-haze svg .theme-button-background-blur {
+  fill: #873cc5;
+}
+
+.theme-sun .theme-button-text {
+  color: #000000;
+}
+
+.theme-sun svg .theme-button-background-main, .theme-sun .Button:active svg .theme-button-background-blur {
+  fill: #998a00;
+}
+
+.theme-sun svg .theme-button-background-blur {
+  fill: #f1d013;
+}
+
+.theme-sun svg .theme-button-icon-main {
+  fill: #000000;
+}
+
+.theme-sun svg .theme-button-icon-theme-border {
+  stroke: #000000;
+}
