@@ -1,4 +1,5 @@
 .Button {
+  display: flex;
   position: relative;
   border: none;
   width: 100%;
