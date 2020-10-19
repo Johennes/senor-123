@@ -56,7 +56,7 @@ svg .theme-button-icon-theme-border {
 }
 
 .theme-unicorn svg .theme-button-background-main, .theme-unicorn .Button:active svg .theme-button-background-blur {
-  fill: #ac1ca0;
+  fill: #94368c;
 }
 
 .theme-unicorn svg .theme-button-background-blur {
@@ -64,11 +64,11 @@ svg .theme-button-icon-theme-border {
 }
 
 .theme-forest svg .theme-button-background-main, .theme-forest .Button:active svg .theme-button-background-blur {
-  fill: #138334;
+  fill: #37941a;
 }
 
 .theme-forest svg .theme-button-background-blur {
-  fill: #47df47;
+  fill: #51e025;
 }
 
 .theme-haze svg .theme-button-background-main, .theme-haze .Button:active svg .theme-button-background-blur {
@@ -84,7 +84,7 @@ svg .theme-button-icon-theme-border {
 }
 
 .theme-sun svg .theme-button-background-main, .theme-sun .Button:active svg .theme-button-background-blur {
-  fill: #998a00;
+  fill: #867a08;
 }
 
 .theme-sun svg .theme-button-background-blur {

@@ -16,8 +16,8 @@ class BackgroundEllipse extends React.Component {
         <clipPath id={this.getId('clip')}>
           <use xlinkHref={this.getIdReference('ellipse')}/>
         </clipPath>
-        <filter id={this.getId('blur')} x="-4%" y="-8%" width="108%" height="116%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+        <filter id={this.getId('blur')} x="-2%" y="-4%" width="104%" height="108%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
         </filter>
       </defs>
       <g clipPath={this.getIdUrlReference('clip')}>

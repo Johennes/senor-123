@@ -16,8 +16,8 @@ class BackgroundTriangleDown extends React.Component {
         <clipPath id={this.getId('clip')}>
           <use xlinkHref={this.getIdReference('triangle')}/>
         </clipPath>
-        <filter id={this.getId('blur')} x="-8%" y="-8%" width="116%" height="116%">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="8"/>
+        <filter id={this.getId('blur')} x="-4%" y="-4%" width="108%" height="108%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
         </filter>
       </defs>
       <g clipPath={this.getIdUrlReference('clip')} transform="rotate(180 50 50)">
