@@ -9,7 +9,7 @@ class Calculator extends React.Component {
     super();
     let operation = new OperationAddition();
     let level = 1;
-    this.themes = ['default', 'unicorn', 'forest', 'haze', 'sun'];
+    this.themes = ['default', 'unicorn', 'forest', 'grapes', 'sun'];
     this.state = {
       on: true,
       theme: 0,

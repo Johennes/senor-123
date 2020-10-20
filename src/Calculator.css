@@ -29,12 +29,16 @@
   color: #ffffff;
 }
 
-svg .theme-button-background-main, .Button:active svg .theme-button-background-blur {
-  fill: #05438a;
+svg .theme-button-background-main {
+  fill: #000000;
 }
 
 svg .theme-button-background-blur {
   fill: #357dcf;
+}
+
+.Button:active svg .theme-button-background-blur {
+  fill: #357dcfbb;
 }
 
 svg .theme-button-icon-main {
@@ -79,12 +83,16 @@ svg .theme-button-icon-theme-border {
 
 /* Theme: Unicorn */
 
-.theme-unicorn svg .theme-button-background-main, .theme-unicorn .Button:active svg .theme-button-background-blur {
-  fill: #94368c;
+.theme-unicorn svg .theme-button-background-main {
+  fill: #000000;
 }
 
 .theme-unicorn svg .theme-button-background-blur {
-  fill: #ce70c6;
+  fill: #ea5a47;
+}
+
+.theme-unicorn .Button:active svg .theme-button-background-blur {
+  fill: #ea5a47bb;
 }
 
 .theme-unicorn .theme-past-result-success {
@@ -97,12 +105,16 @@ svg .theme-button-icon-theme-border {
 
 /* Theme: Forest */
 
-.theme-forest svg .theme-button-background-main, .theme-forest .Button:active svg .theme-button-background-blur {
-  fill: #37941a;
+.theme-forest svg .theme-button-background-main {
+  fill: #000000;
 }
 
 .theme-forest svg .theme-button-background-blur {
-  fill: #51e025;
+  fill: #5c9e31;
+}
+
+.theme-forest .Button:active svg .theme-button-background-blur {
+  fill: #5c9e31bb;
 }
 
 .theme-forest .theme-past-result-success {
@@ -113,21 +125,25 @@ svg .theme-button-icon-theme-border {
   background-image: url(emoji/tree-outline.svg);
 }
 
-/* Theme: Haze */
+/* Theme: Grapes */
 
-.theme-haze svg .theme-button-background-main, .theme-haze .Button:active svg .theme-button-background-blur {
-  fill: #3b0581;
+.theme-grapes svg .theme-button-background-main {
+  fill: #000000;
 }
 
-.theme-haze svg .theme-button-background-blur {
-  fill: #873cc5;
+.theme-grapes svg .theme-button-background-blur {
+  fill: #8967aa;
 }
 
-.theme-haze .theme-past-result-success {
+.theme-grapes .Button:active svg .theme-button-background-blur {
+  fill: #8967aabb;
+}
+
+.theme-grapes .theme-past-result-success {
   background-image: url(emoji/grapes.svg);
 }
 
-.theme-haze .theme-past-result-failure {
+.theme-grapes .theme-past-result-failure {
   background-image: url(emoji/grapes-outline.svg);
 }
 
@@ -137,12 +153,16 @@ svg .theme-button-icon-theme-border {
   color: #000000;
 }
 
-.theme-sun svg .theme-button-background-main, .theme-sun .Button:active svg .theme-button-background-blur {
-  fill: #867a08;
+.theme-sun svg .theme-button-background-main {
+  fill: #000000;
 }
 
 .theme-sun svg .theme-button-background-blur {
-  fill: #f1d013;
+  fill: #fcea2b;
+}
+
+.theme-sun .Button:active svg .theme-button-background-blur {
+  fill: #fcea2bbb;
 }
 
 .theme-sun svg .theme-button-icon-main {
