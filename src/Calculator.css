@@ -23,6 +23,8 @@
   border: none;
 }
 
+/* Theme: Default */
+
 .theme-button-text {
   color: #ffffff;
 }
@@ -55,6 +57,28 @@ svg .theme-button-icon-theme-border {
   stroke: #ffffff;
 }
 
+.theme-result-success {
+  background-image: url(emoji/smile.svg);
+}
+
+.theme-result-failure {
+  background-image: url(emoji/frown.svg);
+}
+
+.theme-result-resolved {
+  background-image: url(emoji/think.svg);
+}
+
+.theme-past-result-success {
+  background-image: url(emoji/star.svg);
+}
+
+.theme-past-result-failure {
+  background-image: url(emoji/star-outline.svg);
+}
+
+/* Theme: Unicorn */
+
 .theme-unicorn svg .theme-button-background-main, .theme-unicorn .Button:active svg .theme-button-background-blur {
   fill: #94368c;
 }
@@ -62,6 +86,16 @@ svg .theme-button-icon-theme-border {
 .theme-unicorn svg .theme-button-background-blur {
   fill: #ce70c6;
 }
+
+.theme-unicorn .theme-past-result-success {
+  background-image: url(emoji/unicorn.svg);
+}
+
+.theme-unicorn .theme-past-result-failure {
+  background-image: url(emoji/unicorn-outline.svg);
+}
+
+/* Theme: Forest */
 
 .theme-forest svg .theme-button-background-main, .theme-forest .Button:active svg .theme-button-background-blur {
   fill: #37941a;
@@ -71,6 +105,16 @@ svg .theme-button-icon-theme-border {
   fill: #51e025;
 }
 
+.theme-forest .theme-past-result-success {
+  background-image: url(emoji/tree.svg);
+}
+
+.theme-forest .theme-past-result-failure {
+  background-image: url(emoji/tree-outline.svg);
+}
+
+/* Theme: Haze */
+
 .theme-haze svg .theme-button-background-main, .theme-haze .Button:active svg .theme-button-background-blur {
   fill: #3b0581;
 }
@@ -78,6 +122,16 @@ svg .theme-button-icon-theme-border {
 .theme-haze svg .theme-button-background-blur {
   fill: #873cc5;
 }
+
+.theme-haze .theme-past-result-success {
+  background-image: url(emoji/grapes.svg);
+}
+
+.theme-haze .theme-past-result-failure {
+  background-image: url(emoji/grapes-outline.svg);
+}
+
+/* Theme: Sun */
 
 .theme-sun .theme-button-text {
   color: #000000;
@@ -97,4 +151,12 @@ svg .theme-button-icon-theme-border {
 
 .theme-sun svg .theme-button-icon-theme-border {
   stroke: #000000;
+}
+
+.theme-sun .theme-past-result-success {
+  background-image: url(emoji/sun.svg);
+}
+
+.theme-sun .theme-past-result-failure {
+  background-image: url(emoji/sun-outline.svg);
 }

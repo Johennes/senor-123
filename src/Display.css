@@ -28,8 +28,29 @@
 
 .Display-line2 {
   font-size: 0.4em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 1.5em;
+}
+
+.Display-levels {
+  margin-right: 0.5em;
+}
+
+.Display-past-result {
+  height: 1.5em;
+  width: 1.5em;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .Display-icon {
-  font-size: 1em;
+  display: flex;
+  width: 1.5em;
+  height: 1.5em;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }

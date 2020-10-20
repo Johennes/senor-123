@@ -8,9 +8,9 @@ class Display extends React.Component {
         <div className="Display-lcd">
           <div>
             <div className="Display-line1">{this.composeLine1()}</div>
-            <div className="Display-line2">{this.composeLine2()}</div>
+            {this.composeLine2()}
           </div>
-          <div className="Display-icon">{this.composeIcon()}</div>
+          <div className={`Display-icon ${this.getIconClass()}`}></div>
         </div>
       </div>
     );
@@ -27,20 +27,29 @@ class Display extends React.Component {
     if (!this.props.on) {
       return '\u00A0';
     }
-    let levels = [1, 2, 3].map(level => { return level === this.props.level ? `${level}` : '\u00A0' }).join('\u00A0');
-    let results = this.props.results.map(result => { return result ? '★' : '☆' }).join('');
-    return `${levels}\u00A0${results}`; 
+    let levels = [1, 2, 3].map(level => {
+      return level === this.props.level ? `${level}` : '\u00A0'
+    }).join('\u00A0');
+    let results = this.props.results.map(result => {
+      return <div className={`Display-past-result ${result ? 'theme-past-result-success' : 'theme-past-result-failure'}`}></div>
+    });
+    return (
+      <div className="Display-line2">
+        <div className="Display-levels">{levels}</div>
+        {results}
+      </div>
+    ); 
   }
 
-  composeIcon = () => {
+  getIconClass = () => {
     if (!this.props.on) {
-      return '\u00A0';
+      return '';
     }
     if (this.props.result === true) {
-      return '😊';
+      return 'theme-result-success';
     }
     if (this.props.result === false) {
-      return this.props.done ? '🤔' :'☹️';
+      return this.props.done ? 'theme-result-resolved' : 'theme-result-failure';
      }
      return '';
   }
