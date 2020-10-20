@@ -238,12 +238,15 @@ class Calculator extends React.Component {
     if (!this.state.on || this.state.done) {
       return;
     }
-    this.setState({
+    let state = {
       input: [...`${this.state.number3}`].map(i => parseInt(i)),
-      done: true,
-      result: false,
-      results: [...this.state.results, false]
-    });
+      done: true
+    };
+    if (this.state.result !== false) {
+      state.result = false;
+      state.results = [...this.state.results, false];
+    }
+    this.setState(state);
     this.switchToNextProblem(2000);
   }
 
