@@ -169,6 +169,14 @@ class Calculator extends React.Component {
             </tr>
           </tbody>
         </table>
+        <footer className="Calculator-footer">
+          <div>
+            Freely adapted from the original <a href="http://www.datamath.org/Edu/MathToGo123.htm">Professor 1.2.3 by Texas Instruments</a>. This site is neither affiliated with nor endorsed by Texas Instruments.
+          </div>
+          <div>
+            All emojis designed by <a href="https://openmoji.org/" rel="nofollow">OpenMoji</a> – the open-source emoji and icon project. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/#" rel="nofollow">CC BY-SA 4.0</a>
+          </div>
+        </footer>
       </div>
     );
   }
