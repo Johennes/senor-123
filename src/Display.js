@@ -30,8 +30,8 @@ class Display extends React.Component {
     let levels = [1, 2, 3].map(level => {
       return level === this.props.level ? `${level}` : '\u00A0'
     }).join('\u00A0');
-    let results = this.props.results.map(result => {
-      return <div className={`Display-past-result ${result ? 'theme-past-result-success' : 'theme-past-result-failure'}`}></div>
+    let results = this.props.results.map((result, index) => {
+      return <div key={index} className={`Display-past-result ${result ? 'theme-past-result-success' : 'theme-past-result-failure'}`}></div>
     });
     return (
       <div className="Display-line2">
