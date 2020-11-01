@@ -174,7 +174,13 @@ class Calculator extends React.Component {
             Freely adapted from the original <a href="http://www.datamath.org/Edu/MathToGo123.htm">Professor 1.2.3 by Texas Instruments</a>. This site is neither affiliated with nor endorsed by Texas Instruments.
           </div>
           <div>
+            Licensed under the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+          </div>
+          <div>
             All emojis designed by <a href="https://openmoji.org/" rel="nofollow">OpenMoji</a> – the open-source emoji and icon project. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/#" rel="nofollow">CC BY-SA 4.0</a>
+          </div>
+          <div>
+            <a href="https://nosuchdomain.mooo.com/git/doc/senor-123">Gitea</a> | <a href="https://github.com/johennes/senor-123">GitHub</a> | <a href="https://gitlab.com/cherrypicker/senor-123">GitLab</a>
           </div>
         </footer>
       </div>
