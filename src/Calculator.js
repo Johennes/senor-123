@@ -8,15 +8,14 @@ import OperationSubtraction from './OperationSubtraction.js'
 class Calculator extends React.Component {
   constructor() {
     super();
-    let operation = new OperationAddition();
     let level = 1;
     this.themes = ['default', 'unicorn', 'forest', 'grapes', 'sun'];
     this.state = {
       on: true,
       theme: 0,
-      operation,
+      operation: 'addition',
       level,
-      problems: [operation.createProblem(level)],
+      problems: [this.getOperation('addition').createProblem(level)],
       input: [],
       done: false,
       result: null,
@@ -46,7 +45,7 @@ class Calculator extends React.Component {
                   number1={problem.number1}
                   number2={problem.number2}
                   number3={this.state.input.map(String).join('')}
-                  operator={this.state.operation.getSymbol()}
+                  operator={this.getOperation(this.state.operation).getSymbol()}
                   level={this.state.level}
                   result={this.state.result}
                   results={this.state.results}/>
@@ -135,7 +134,7 @@ class Calculator extends React.Component {
                 id="minus"
                 title="&nbsp;"
                 type="minus"
-                onClick={() => this.switchToOperation(new OperationSubtraction())}/></td>
+                onClick={() => this.switchToOperation('subtraction')}/></td>
             </tr>
             <tr>
               <td></td>
@@ -158,7 +157,7 @@ class Calculator extends React.Component {
                 id="plus"
                 title="&nbsp;"
                 type="plus"
-                onClick={() => this.switchToOperation(new OperationAddition())}/></td>
+                onClick={() => this.switchToOperation('addition')}/></td>
             </tr>
             <tr>
               <td colSpan="2"><Button
@@ -201,13 +200,12 @@ class Calculator extends React.Component {
     if (this.state.on) {
       return;
     }
-    let operation = new OperationAddition();
     let level = 1;
     this.setState({
       on: true,
-      operation,
+      operation: 'addition',
       level,
-      problems: [operation.createProblem(level)],
+      problems: [this.getOperation('addition').createProblem(level)],
       input: [],
       done: false,
       result: null,
@@ -222,6 +220,15 @@ class Calculator extends React.Component {
     this.setState({
       on: false
     });
+  }
+
+  getOperation = (name) => {
+    if (name === "addition") {
+      return new OperationAddition();
+    }
+    if (name === "subtraction") {
+      return new OperationSubtraction();
+    }
   }
 
   getProblem = () => {
@@ -280,13 +287,13 @@ class Calculator extends React.Component {
   }
 
   switchLevel = () => {
-    if (!this.state.on) {
+    if (!this.state.on || this.state.done) {
       return;
     }
     let level = 1 + (this.state.level % 3);
     this.setState({
       level: level,
-      problems: [this.state.operation.createProblem(level)],
+      problems: [this.getOperation(this.state.operation).createProblem(level)],
       input: [],
       done: false,
       result: null,
@@ -298,12 +305,13 @@ class Calculator extends React.Component {
     this.setState({theme: (this.state.theme + 1) % this.themes.length});
   }
 
-  switchToOperation = (operation) => {
-    if (!this.state.on) {
+  switchToOperation = (name) => {
+    if (!this.state.on || this.state.done || name === this.state.operation) {
       return;
     }
+    let operation = this.getOperation(name);
     this.setState({
-      operation: operation,
+      operation: name,
       problems: [operation.createProblem(this.state.level)],
       input: [],
       done: false,
@@ -319,8 +327,9 @@ class Calculator extends React.Component {
       }, timeout);
     } else {
       let problems = this.state.results.length >= 5 ? [] : this.state.problems;
+      let operation = this.getOperation(this.state.operation);
       while (true) {
-        let problem = this.state.operation.createProblem(this.state.level);
+        let problem = operation.createProblem(this.state.level);
         if (!problems.some(p => p.number1 === problem.number1 && p.number2 === problem.number2)) {
           problems.push(problem);
           break;

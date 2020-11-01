@@ -1,6 +1,6 @@
 class OperationAddition {
   getSymbol = () => {
-    return "+"
+    return '+';
   }
 
   createProblem = (level) => {
