@@ -1,4 +1,8 @@
 class OperationAddition {
+  getSymbol = () => {
+    return "+"
+  }
+
   createProblem = (level) => {
     let number1 = this.getRandomInteger(this.getMinimumOperand(level), this.getMaximumOperand(level));
     let number2 = this.getRandomInteger(this.getMinimumOperand(level), this.getMaximumResult(level) - number1);

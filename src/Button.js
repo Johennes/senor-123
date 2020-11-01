@@ -2,6 +2,8 @@ import React from 'react';
 import './Button.css';
 import BackgroundCircle from './BackgroundCircle'
 import BackgroundEllipse from './BackgroundEllipse'
+import BackgroundMinus from './BackgroundMinus'
+import BackgroundPlus from './BackgroundPlus'
 import BackgroundRect from './BackgroundRect'
 import BackgroundTriangleUp from './BackgroundTriangleUp'
 import BackgroundTriangleDown from './BackgroundTriangleDown'
@@ -25,6 +27,16 @@ class Button extends React.Component {
     }
     if (this.props.type === 'ellipse') {
       return <BackgroundEllipse
+        parentId={this.props.id}
+        className="Button-background"/>
+    }
+    if (this.props.type === 'minus') {
+      return <BackgroundMinus
+        parentId={this.props.id}
+        className="Button-background"/>
+    }
+    if (this.props.type === 'plus') {
+      return <BackgroundPlus
         parentId={this.props.id}
         className="Button-background"/>
     }

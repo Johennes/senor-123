@@ -3,6 +3,7 @@ import './Calculator.css';
 import Button from './Button.js'
 import Display from './Display.js'
 import OperationAddition from './OperationAddition.js'
+import OperationSubtraction from './OperationSubtraction.js'
 
 class Calculator extends React.Component {
   constructor() {
@@ -45,7 +46,7 @@ class Calculator extends React.Component {
                   number1={problem.number1}
                   number2={problem.number2}
                   number3={this.state.input.map(String).join('')}
-                  operator="+"
+                  operator={this.state.operation.getSymbol()}
                   level={this.state.level}
                   result={this.state.result}
                   results={this.state.results}/>
@@ -130,7 +131,11 @@ class Calculator extends React.Component {
                 title="6"
                 type="circle"
                 onClick={() => this.enterDigit(6)}/></td>
-              <td></td>
+              <td><Button
+                id="minus"
+                title="&nbsp;"
+                type="minus"
+                onClick={() => this.switchToOperation(new OperationSubtraction())}/></td>
             </tr>
             <tr>
               <td></td>
@@ -149,7 +154,11 @@ class Calculator extends React.Component {
                 title="9"
                 type="circle"
                 onClick={() => this.enterDigit(9)}/></td>
-              <td></td>
+              <td><Button
+                id="plus"
+                title="&nbsp;"
+                type="plus"
+                onClick={() => this.switchToOperation(new OperationAddition())}/></td>
             </tr>
             <tr>
               <td colSpan="2"><Button
@@ -271,6 +280,9 @@ class Calculator extends React.Component {
   }
 
   switchLevel = () => {
+    if (!this.state.on) {
+      return;
+    }
     let level = 1 + (this.state.level % 3);
     this.setState({
       level: level,
@@ -284,6 +296,20 @@ class Calculator extends React.Component {
 
   switchTheme = () => {
     this.setState({theme: (this.state.theme + 1) % this.themes.length});
+  }
+
+  switchToOperation = (operation) => {
+    if (!this.state.on) {
+      return;
+    }
+    this.setState({
+      operation: operation,
+      problems: [operation.createProblem(this.state.level)],
+      input: [],
+      done: false,
+      result: null,
+      results: []
+    });
   }
 
   switchToNextProblem = (timeout) => {
