@@ -19,4 +19,4 @@ All emojis designed by [OpenMoji] – the open-source emoji and icon project. Li
   [original Professor 1.2.3 / Math...To Go!]: http://www.datamath.org/Edu/MathToGo123.htm
   [OpenMoji]: https://openmoji.org/
   [CC BY-SA 4.0]: https://creativecommons.org/licenses/by-sa/4.0/#
-  [See it in action]: https://johennes.github.io/senor-123/
+  [See it in action!]: https://johennes.github.io/senor-123/
