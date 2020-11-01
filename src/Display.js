@@ -25,7 +25,7 @@ class Display extends React.Component {
 
   composeLine2 = () => {
     if (!this.props.on) {
-      return '\u00A0';
+      return <div className="Display-line2">&nbsp;</div>;
     }
     let levels = [1, 2, 3].map(level => {
       return level === this.props.level ? `${level}` : '\u00A0'
