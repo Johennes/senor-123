@@ -15,7 +15,7 @@ class Calculator extends React.Component {
       theme: 0,
       operation,
       level,
-      ...operation.createProblem(level),
+      problems: [operation.createProblem(level)],
       input: [],
       done: false,
       result: null,
@@ -32,6 +32,7 @@ class Calculator extends React.Component {
   }
 
   render() {
+    let problem = this.getProblem();
     return (
       <div className={`theme-${this.themes[this.state.theme]}`}>
         <table className="Calculator-table" cellSpacing="0" cellPadding="0">
@@ -41,8 +42,8 @@ class Calculator extends React.Component {
                 <Display
                   on={this.state.on}
                   done={this.state.done}
-                  number1={this.state.number1}
-                  number2={this.state.number2}
+                  number1={problem.number1}
+                  number2={problem.number2}
                   number3={this.state.input.map(String).join('')}
                   operator="+"
                   level={this.state.level}
@@ -197,7 +198,7 @@ class Calculator extends React.Component {
       on: true,
       operation,
       level,
-      ...operation.createProblem(level),
+      problems: [operation.createProblem(level)],
       input: [],
       done: false,
       result: null,
@@ -212,6 +213,11 @@ class Calculator extends React.Component {
     this.setState({
       on: false
     });
+  }
+
+  getProblem = () => {
+    const [problem] = this.state.problems.slice(-1);
+    return problem;
   }
 
   enterDigit = (number) => {
@@ -236,7 +242,7 @@ class Calculator extends React.Component {
     for (let i = 0; i < this.state.input.length; ++i) {
       inputDecimal += Math.pow(10, i) * this.state.input[this.state.input.length - 1 - i];
     }
-    let result = this.state.number3 === inputDecimal;
+    let result = this.getProblem().number3 === inputDecimal;
     if (this.state.result === null) {
       this.setState({results: [...this.state.results, result]});
     }
@@ -253,7 +259,7 @@ class Calculator extends React.Component {
       return;
     }
     let state = {
-      input: [...`${this.state.number3}`].map(i => parseInt(i)),
+      input: [...`${this.getProblem().number3}`].map(i => parseInt(i)),
       done: true
     };
     if (this.state.result !== false) {
@@ -268,7 +274,7 @@ class Calculator extends React.Component {
     let level = 1 + (this.state.level % 3);
     this.setState({
       level: level,
-      ...this.state.operation.createProblem(level),
+      problems: [this.state.operation.createProblem(level)],
       input: [],
       done: false,
       result: null,
@@ -286,8 +292,16 @@ class Calculator extends React.Component {
         this.switchToNextProblem(0);
       }, timeout);
     } else {
+      let problems = this.state.results.length >= 5 ? [] : this.state.problems;
+      while (true) {
+        let problem = this.state.operation.createProblem(this.state.level);
+        if (!problems.some(p => p.number1 === problem.number1 && p.number2 === problem.number2)) {
+          problems.push(problem);
+          break;
+        }
+      }
       this.setState({
-        ...this.state.operation.createProblem(this.state.level),
+        problems,
         input: [],
         done: false,
         result: null,
