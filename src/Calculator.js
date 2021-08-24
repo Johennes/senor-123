@@ -189,7 +189,7 @@ class Calculator extends React.Component {
             All emojis designed by <a href="https://openmoji.org/" rel="nofollow">OpenMoji</a> – the open-source emoji and icon project. License: <a href="https://creativecommons.org/licenses/by-sa/4.0/#" rel="nofollow">CC BY-SA 4.0</a>
           </div>
           <div>
-            <a href="https://nosuchdomain.mooo.com/git/doc/senor-123">Gitea</a> | <a href="https://github.com/johennes/senor-123">GitHub</a> | <a href="https://gitlab.com/cherrypicker/senor-123">GitLab</a>
+            <a href="https://github.com/johennes/senor-123">GitHub</a>
           </div>
         </footer>
       </div>
